@@ -1,0 +1,68 @@
+/* =================================
+   JP SMART TECH LABS
+   RESPONSIVE STYLES
+================================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    :root {
+        --container-width: 900px;
+    }
+
+    section {
+        padding: 64px 0;
+    }
+}
+
+/* Small Tablets */
+@media (max-width: 768px) {
+    .container {
+        width: min(100% - 32px, var(--container-width));
+    }
+
+    section {
+        padding: 56px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 32px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    body {
+        font-size: 15px;
+    }
+
+    .container {
+        width: min(100% - 28px, var(--container-width));
+    }
+
+    section {
+        padding: 44px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .section-heading p {
+        font-size: 14px;
+    }
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

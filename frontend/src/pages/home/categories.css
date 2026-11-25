@@ -1,0 +1,662 @@
+﻿/* =====================================
+   JP SMART TECH LABS
+   INDUSTRIAL SERVICES SECTION
+===================================== */
+
+.categories-section {
+    position: relative;
+    padding: 85px 0;
+    overflow: hidden;
+    background:
+        linear-gradient(110deg, rgba(3, 13, 27, .94), rgba(5, 24, 43, .88)),
+        url("./src/assets/home-bg/home-bg-2.png") center/cover no-repeat;
+}
+
+.categories-section::before {
+    content: "";
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    top: 10%;
+    left: -260px;
+    background: #0ea5e9;
+    filter: blur(180px);
+    opacity: .12;
+    pointer-events: none;
+}
+
+.categories-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Heading */
+
+.categories-heading {
+    max-width: 760px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.section-tag {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #38bdf8;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.categories-heading h2 {
+    margin-bottom: 14px;
+    color: #f8fafc;
+    font-size: clamp(30px, 4vw, 45px);
+    line-height: 1.2;
+}
+
+.categories-heading h2 span {
+    color: #38bdf8;
+}
+
+.categories-heading p {
+    color: #a8b7c9;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Main Layout */
+
+.services-layout {
+    display: grid;
+    grid-template-columns: 245px minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+}
+
+/* Sidebar */
+
+.services-sidebar {
+    position: sticky;
+    top: 105px;
+    padding: 25px 20px;
+    background: rgba(245, 249, 252, .97);
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 14px;
+    box-shadow: 0 15px 45px rgba(0,0,0,.18);
+}
+
+.sidebar-label,
+.services-eyebrow {
+    color: #0284c7;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.services-sidebar h3 {
+    margin: 9px 0 20px;
+    color: #10243b;
+    font-size: 23px;
+}
+
+.service-filter {
+    display: block;
+    margin-bottom: 7px;
+    padding: 12px 11px;
+    border-radius: 7px;
+    color: #475569;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+.service-filter:hover,
+.service-filter.active {
+    color: #0369a1;
+    background: #e0f2fe;
+}
+
+.service-filter.active {
+    border-left: 3px solid #0284c7;
+}
+
+.sidebar-note {
+    margin-top: 25px;
+    padding: 17px 14px;
+    background: #eaf5fc;
+    border-radius: 9px;
+}
+
+.sidebar-note span {
+    color: #0284c7;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.sidebar-note p {
+    margin: 9px 0 13px;
+    color: #334155;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.sidebar-note a {
+    color: #0369a1;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+/* Services Content */
+
+.services-content {
+    min-width: 0;
+}
+
+.services-topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.services-topline h3 {
+    margin-top: 7px;
+    color: #f8fafc;
+    font-size: 23px;
+}
+
+.services-count {
+    padding: 8px 12px;
+    color: #7dd3fc;
+    background: rgba(14, 165, 233, .1);
+    border: 1px solid rgba(56, 189, 248, .25);
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+/* Service Cards */
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.category-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 255px;
+    padding: 25px;
+    overflow: hidden;
+    background: linear-gradient(
+        145deg,
+        rgba(20, 43, 68, .92),
+        rgba(7, 23, 42, .96)
+    );
+    border: 1px solid rgba(125, 211, 252, .16);
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.16);
+    transition: transform .3s ease, border-color .3s ease,
+                box-shadow .3s ease;
+    scroll-margin-top: 110px;
+}
+
+.category-card::after {
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    right: -65px;
+    top: -65px;
+    border-radius: 50%;
+    background: rgba(14, 165, 233, .12);
+    filter: blur(25px);
+    pointer-events: none;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(56, 189, 248, .65);
+    box-shadow: 0 15px 38px rgba(2, 132, 199, .15);
+}
+
+/* Icons */
+
+.category-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, .1);
+    border: 1px solid rgba(56, 189, 248, .25);
+    border-radius: 10px;
+}
+
+.category-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.service-number {
+    margin-bottom: 9px;
+    color: #38bdf8;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+/* Card Content */
+
+.category-card h3 {
+    margin-bottom: 11px;
+    color: #f8fafc;
+    font-size: 18px;
+}
+
+.category-card p {
+    margin-bottom: 22px;
+    color: #a8b7c9;
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+.category-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: auto;
+    color: #38bdf8;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.category-card a span {
+    transition: transform .25s ease;
+}
+
+.category-card a:hover span {
+    transform: translateX(5px);
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .services-layout {
+        grid-template-columns: 205px minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card {
+        min-height: 225px;
+    }
+
+    .services-sidebar {
+        padding: 20px 14px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+    .categories-section {
+        padding: 65px 0;
+    }
+
+    .categories-heading {
+        margin-bottom: 35px;
+    }
+
+    .services-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .services-sidebar {
+        position: static;
+    }
+
+    .services-sidebar h3 {
+        margin-bottom: 13px;
+    }
+
+    .service-filter {
+        display: inline-block;
+        margin: 3px;
+        padding: 9px 11px;
+        background: #f1f5f9;
+        border: 1px solid #dbeafe;
+        border-radius: 20px;
+        font-size: 11px;
+    }
+
+    .service-filter.active {
+        border: 1px solid #0284c7;
+        background: #e0f2fe;
+    }
+
+    .sidebar-note {
+        margin-top: 16px;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card {
+        min-height: 220px;
+        padding: 23px;
+    }
+
+    .services-topline h3 {
+        font-size: 20px;
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .category-card,
+    .category-card a span,
+    .service-filter {
+        transition: none;
+    }
+}
+
+/* RESTORE ORIGINAL CATEGORIES HEADING */
+
+.categories-heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 55px;
+}
+
+.section-tag {
+    display: inline-block;
+    color: #38bdf8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.categories-heading h2 {
+    color: #f8fafc;
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.categories-heading h2 span {
+    color: #38bdf8;
+}
+
+.categories-heading p {
+    color: #94a3b8;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* HORIZONTAL SERVICE CAROUSEL */
+
+.services-layout {
+    display: block;
+}
+
+.services-sidebar {
+    display: none;
+}
+
+.categories-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding: 10px 2px 25px;
+}
+
+.categories-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.category-card {
+    flex: 0 0 calc((100% - 48px) / 3);
+    min-width: 0;
+    scroll-snap-align: start;
+}
+
+.category-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.category-arrow {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #172033;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.category-arrow:hover:not(:disabled) {
+    background: #ff922e;
+}
+
+.category-arrow:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+    .category-card {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+}
+
+@media (max-width: 550px) {
+    .category-card {
+        flex-basis: 85%;
+    }
+}
+
+/* =====================================
+   CATEGORY CAROUSEL - CLEAN LAYOUT
+===================================== */
+
+/* Remove the extra services heading row */
+.services-topline {
+    display: none !important;
+}
+
+/* Position arrows relative to the carousel */
+.services-layout {
+    position: relative;
+}
+
+.category-controls {
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    right: -25px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    pointer-events: none;
+    margin: 0;
+}
+
+/* Subtle carousel arrows */
+.category-arrow {
+    width: 48px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 12px;
+    background: rgba(255,255,255,.16);
+    color: #ffffff;
+    font-size: 25px;
+    opacity: .35;
+    cursor: pointer;
+    pointer-events: auto;
+    backdrop-filter: blur(8px);
+    transition: opacity .3s ease, background .3s ease;
+}
+
+.category-arrow:hover:not(:disabled) {
+    opacity: .9;
+    background: rgba(255,255,255,.3);
+}
+
+.category-arrow:disabled {
+    opacity: .15;
+    cursor: not-allowed;
+}
+
+/* Keep arrows inside the screen on smaller devices */
+@media (max-width: 900px) {
+    .category-controls {
+        left: -12px;
+        right: -12px;
+    }
+}
+
+@media (max-width: 550px) {
+    .category-controls {
+        left: -5px;
+        right: -5px;
+    }
+
+    .category-arrow {
+        width: 38px;
+        height: 46px;
+        font-size: 21px;
+    }
+}
+
+
+/* REDUCE SPACE BELOW NAVBAR */
+
+.categories-section {
+    padding-top: 30px !important;
+}
+
+.categories-heading {
+    margin-top: 0;
+}
+
+@media (max-width: 550px) {
+    .categories-section {
+        padding-top: 25px !important;
+    }
+}
+
+
+/* DISPLAY ALL FOUR CATEGORY CARDS */
+.categories-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 18px;
+    overflow: visible !important;
+    padding: 10px 0 25px;
+}
+
+.category-card {
+    flex: initial !important;
+    min-width: 0;
+    width: 100%;
+}
+
+.category-controls {
+    display: none !important;
+}
+
+@media (max-width: 1000px) {
+    .categories-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 550px) {
+    .categories-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+
+/* FINAL CATEGORY CARD VISIBILITY FIX */
+.categories-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: 100%;
+    overflow: visible !important;
+}
+
+.category-card {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: none !important;
+    min-width: 0;
+    position: relative;
+}
+
+.category-card > * {
+    position: relative;
+    z-index: 2;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.category-card h3 {
+    color: #f8fafc !important;
+}
+
+.category-card p {
+    color: #a8b7c9 !important;
+}
+
+.category-card .service-number,
+.category-card a {
+    color: #38bdf8 !important;
+}
+
+@media (max-width: 1000px) {
+    .categories-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 550px) {
+    .categories-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+

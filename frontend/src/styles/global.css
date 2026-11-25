@@ -1,0 +1,125 @@
+/* =================================
+   JP SMART TECH LABS
+   GLOBAL STYLES
+================================= */
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HTML */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* Body */
+body {
+    font-family: var(--font-primary);
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Lists */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Buttons */
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/* Inputs */
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+/* Paragraphs */
+p {
+    color: var(--text-secondary);
+}
+
+/* Main Container */
+.container {
+    width: min(100% - 40px, var(--container-width));
+    margin-inline: auto;
+}
+
+/* Sections */
+section {
+    padding: 80px 0;
+}
+
+/* Reusable Section Heading */
+.section-heading {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.section-heading h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    margin-bottom: 16px;
+}
+
+.section-heading p {
+    max-width: 650px;
+    margin-inline: auto;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Selection */
+::selection {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+/* Focus Accessibility */
+:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
+}

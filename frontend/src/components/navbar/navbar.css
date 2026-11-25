@@ -1,0 +1,252 @@
+﻿/* =================================
+   JP SMART TECH LABS
+   PREMIUM GLASS NAVBAR
+================================= */
+
+.navbar {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(3, 20, 38, 0.72);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-container {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+/* Branding */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.brand img {
+    height: 58px;
+    width: auto;
+    max-width: 190px;
+    object-fit: contain;
+}
+
+/* Navigation */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-link {
+    position: relative;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(226, 239, 250, 0.82);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: #22c1f1;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Contact Button */
+
+.nav-contact {
+    padding: 11px 21px;
+    color: #ffffff;
+    background: linear-gradient(
+        135deg,
+        rgba(34, 193, 241, 0.9),
+        rgba(15, 112, 177, 0.9)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 18px rgba(34, 193, 241, 0.18);
+    transition: all 0.3s ease;
+}
+
+.nav-contact::after {
+    display: none;
+}
+
+.nav-contact:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 24px rgba(34, 193, 241, 0.32);
+}
+
+/* Mobile Toggle */
+
+.menu-toggle {
+    display: none;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 9px;
+    padding: 9px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 5px 0;
+    background: #e2f3ff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .navbar-container {
+        min-height: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 22px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+
+        background: rgba(3, 20, 38, 0.94);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-contact {
+        text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar,
+    .nav-link,
+    .nav-link::after,
+    .nav-contact,
+    .menu-toggle span {
+        transition: none;
+    }
+}
+
+/* Navigation action icons */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 12px;
+}
+
+.nav-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e2edf8;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.nav-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.nav-icon:hover {
+    color: #38bdf8;
+    background: rgba(56,189,248,0.14);
+    border-color: #38bdf8;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .nav-actions {
+        margin-left: auto;
+        gap: 7px;
+    }
+
+    .nav-icon {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+
+.navbar-container {
+    gap: 16px;
+}
+
+.nav-actions {
+    flex-shrink: 0;
+    gap: 9px;
+    margin-left: 4px;
+}
+
+.nav-icon {
+    width: 40px;
+    height: 40px;
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        gap: 10px;
+    }
+}
+
