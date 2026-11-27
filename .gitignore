@@ -1,4 +1,5 @@
-﻿# Dependencies
+﻿
+# Dependencies
 node_modules/
 
 # Frontend build files
@@ -29,6 +30,8 @@ logs/
 # Testing and coverage
 .coverage
 htmlcov/
+coverage/
+.nyc_output/
 
 # Operating system
 .DS_Store
