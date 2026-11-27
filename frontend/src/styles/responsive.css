@@ -1,68 +1,68 @@
-/* =================================
+
+/* =========================================
    JP SMART TECH LABS
-   RESPONSIVE STYLES
-================================= */
+   RESPONSIVE FOUNDATION
+========================================= */
 
-/* Tablets */
+/* Large Tablets and Small Desktops */
+
 @media (max-width: 1024px) {
-    :root {
-        --container-width: 900px;
-    }
+  :root {
+    --container-width: 960px;
+  }
 
-    section {
-        padding: 64px 0;
-    }
+  .section {
+    padding-block: var(--space-16);
+  }
 }
 
-/* Small Tablets */
+/* Tablets and Mobile */
+
 @media (max-width: 768px) {
-    .container {
-        width: min(100% - 32px, var(--container-width));
-    }
+  :root {
+    --navbar-height: 70px;
+  }
 
-    section {
-        padding: 56px 0;
-    }
+  .container {
+    width: min(100% - 32px, var(--container-width));
+  }
 
-    .section-heading {
-        margin-bottom: 32px;
-    }
+  .section {
+    padding-block: var(--space-12);
+  }
 
-    .section-heading h2 {
-        font-size: 30px;
-    }
+  .section-heading {
+    margin-bottom: var(--space-8);
+  }
 }
 
-/* Mobile Devices */
+/* Small Mobile Devices */
+
 @media (max-width: 480px) {
-    body {
-        font-size: 15px;
-    }
+  .container {
+    width: min(100% - 24px, var(--container-width));
+  }
 
-    .container {
-        width: min(100% - 28px, var(--container-width));
-    }
+  .section {
+    padding-block: var(--space-10);
+  }
 
-    section {
-        padding: 44px 0;
-    }
-
-    .section-heading h2 {
-        font-size: 26px;
-    }
-
-    .section-heading p {
-        font-size: 14px;
-    }
+  .primary-button,
+  .secondary-button {
+    padding: 11px 20px;
+    font-size: var(--text-sm);
+  }
 }
 
-/* Accessibility: Reduced Motion */
+/* Reduced Motion Accessibility */
+
 @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-    }
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
