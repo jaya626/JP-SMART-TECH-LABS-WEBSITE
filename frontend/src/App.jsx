@@ -1,10 +1,8 @@
+
+import HomePage from "./pages/HomePage";
+
 function App() {
-  return (
-    <main>
-      <h1>JP Smart Tech Labs</h1>
-      <p>Innovate • Build • Automate</p>
-    </main>
-  );
+  return <HomePage />;
 }
 
 export default App;

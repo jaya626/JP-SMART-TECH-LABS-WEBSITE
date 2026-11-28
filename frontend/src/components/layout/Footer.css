@@ -1,0 +1,388 @@
+
+/* =========================================
+   JP SMART TECH LABS
+   PREMIUM RESPONSIVE FOOTER
+   PURPLE + ORANGE BRAND THEME
+========================================= */
+
+/* =========================================
+   MAIN FOOTER
+========================================= */
+
+.site-footer {
+  position: relative;
+  width: 100%;
+  background: #542177;
+  color: #FFFFFF;
+  overflow: hidden;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 75px 30px 0;
+}
+
+/* =========================================
+   MAIN FOOTER CONTENT
+========================================= */
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1.15fr 1fr;
+  gap: 55px;
+  padding-bottom: 60px;
+}
+
+/* =========================================
+   BRAND
+========================================= */
+
+.footer-brand {
+  max-width: 340px;
+}
+
+.footer-brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.footer-brand-logo {
+  width: 49px;
+  height: 49px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: #FFA239;
+  color: #542177;
+
+  border-radius: 11px;
+
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.footer-brand-name {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer-brand-name strong {
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.footer-brand-name small {
+  color: #FFA239;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* =========================================
+   BRAND DESCRIPTION
+========================================= */
+
+.footer-description {
+  max-width: 330px;
+  margin-top: 23px;
+
+  color: rgba(255, 255, 255, 0.76);
+
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* =========================================
+   CONTACT BUTTON
+========================================= */
+
+.footer-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-top: 24px;
+  padding: 11px 17px;
+
+  background: #FFA239;
+  color: #30283A;
+
+  border: 1px solid #FFA239;
+  border-radius: 7px;
+
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-contact-btn span {
+  font-size: 17px;
+  transition: transform 0.25s ease;
+}
+
+.footer-contact-btn:hover {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #542177;
+  transform: translateY(-3px);
+}
+
+.footer-contact-btn:hover span {
+  transform: translate(2px, -2px);
+}
+
+/* =========================================
+   FOOTER COLUMNS
+========================================= */
+
+.footer-column h3 {
+  position: relative;
+
+  margin: 5px 0 25px;
+  padding-bottom: 13px;
+
+  color: #FFFFFF;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.footer-column h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 35px;
+  height: 2px;
+
+  background: #FFA239;
+  border-radius: 5px;
+}
+
+.footer-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.footer-column ul li a {
+  display: inline-block;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 12.5px;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #FFA239;
+  transform: translateX(5px);
+}
+
+/* =========================================
+   FOOTER BOTTOM
+========================================= */
+
+.footer-bottom {
+  min-height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.footer-tagline {
+  text-align: center;
+}
+
+.footer-back-to-top {
+  color: #FFA239;
+
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: color 0.25s ease;
+}
+
+.footer-back-to-top:hover {
+  color: #FFFFFF;
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 1050px) {
+  .footer-container {
+    padding: 65px 25px 0;
+  }
+
+  .footer-main {
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+    max-width: 550px;
+  }
+
+  .footer-description {
+    max-width: 470px;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 650px) {
+  .footer-container {
+    padding: 50px 20px 0;
+  }
+
+  .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 38px 25px;
+    padding-bottom: 40px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+    max-width: 100%;
+  }
+
+  .footer-brand-logo {
+    width: 44px;
+    height: 44px;
+    font-size: 19px;
+  }
+
+  .footer-brand-name strong {
+    font-size: 14px;
+  }
+
+  .footer-description {
+    max-width: 100%;
+    margin-top: 18px;
+    font-size: 12.5px;
+  }
+
+  .footer-column h3 {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .footer-column ul {
+    gap: 13px;
+  }
+
+  .footer-column ul li a {
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 22px 0;
+  }
+
+  .footer-tagline {
+    text-align: left;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+  .footer-container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .footer-main {
+    gap: 32px 16px;
+  }
+
+  .footer-brand-name strong {
+    font-size: 12px;
+  }
+
+  .footer-brand-name small {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+
+  .footer-column h3 {
+    font-size: 13px;
+  }
+
+  .footer-column ul li a {
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+.site-footer a:focus-visible {
+  outline: 3px solid #FFA239;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-footer *,
+  .site-footer *::before,
+  .site-footer *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
