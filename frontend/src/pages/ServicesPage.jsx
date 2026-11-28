@@ -173,14 +173,12 @@ function ServicesPage() {
               </p>
 
               <div className="services-hero-actions">
-                <a href="#service-list" className="services-hero-link">
-                  EXPLORE OUR SERVICES
+                <a href="#project-process" className="services-hero-link">
+                  HOW IT WORKS
                   <ArrowUpRight size={18} />
                 </a>
 
-                <a href="#project-process" className="services-text-link">
-                  HOW IT WORKS
-                </a>
+
               </div>
 
               <div className="services-hero-points">
@@ -217,136 +215,54 @@ function ServicesPage() {
           </div>
         </section>
 
-        {/* SERVICE INTRO */}
-        <section className="services-list-section" id="service-list">
+        {/* QUICK SERVICE NAVIGATION */}
+        <section className="service-shortcuts" id="service-shortcuts">
           <div className="services-container">
-            <div className="services-section-heading">
-              <span className="services-eyebrow">OUR EXPERTISE / 01—04</span>
-              <h2>
-                Solutions for <span>Every Idea.</span>
-              </h2>
+            <div className="shortcuts-heading">
+              <span className="services-eyebrow">EXPLORE OUR EXPERTISE</span>
+              <h2>What Can We <span>Help You Create?</span></h2>
               <p>
-                Our services cover different stages of the product journey,
-                from converting digital models into physical components to
-                exploring materials and evaluating prototypes.
+                Choose a service to explore its capabilities, applications
+                and available material options.
               </p>
             </div>
 
-            <div className="services-detailed-list">
-              {services.map((service) => {
-                const Icon = service.icon;
-                const SmallIcon = service.iconSmall;
+            <div className="service-shortcuts-grid">
+              <a href="/services/3d-model-printing" className="service-shortcut-card">
+                <span className="shortcut-number">01</span>
+                <span className="shortcut-icon"><Printer size={27} /></span>
+                <h3>3D Model Printing</h3>
+                <p>Convert CAD designs and digital models into physical components.</p>
+                <span className="shortcut-action">EXPLORE SERVICE <ArrowUpRight size={17} /></span>
+              </a>
 
-                return (
-                  <article
-                    className="service-detail-card"
-                    key={service.number}
-                  >
-                    <div className="service-detail-header">
-                      <div className="service-detail-icon">
-                        <Icon size={31} strokeWidth={1.6} />
-                      </div>
-                      <span className="service-detail-number">
-                        SERVICE / {service.number}
-                      </span>
-                    </div>
+              <a href="/services/3d-printed-products" className="service-shortcut-card">
+                <span className="shortcut-number">02</span>
+                <span className="shortcut-icon"><Box size={27} /></span>
+                <h3>3D Printed Products</h3>
+                <p>Explore customized products designed for creativity and usability.</p>
+                <span className="shortcut-action">EXPLORE SERVICE <ArrowUpRight size={17} /></span>
+              </a>
 
-                    <div className="service-detail-content">
-                      <div className="service-detail-main">
-                        <h3>{service.title}</h3>
-                        <h4>{service.subtitle}</h4>
-                        <p>{service.description}</p>
-                        <p>{service.detail}</p>
-                      </div>
+              <a href="/services/engineering-prototyping" className="service-shortcut-card">
+                <span className="shortcut-number">03</span>
+                <span className="shortcut-icon"><Ruler size={27} /></span>
+                <h3>Engineering Prototyping</h3>
+                <p>Evaluate concepts through physical prototypes and design refinement.</p>
+                <span className="shortcut-action">EXPLORE SERVICE <ArrowUpRight size={17} /></span>
+              </a>
 
-                      <div className="service-detail-includes">
-                        <h5>
-                          <SmallIcon size={18} />
-                          WHAT THIS SERVICE INCLUDES
-                        </h5>
-
-                        <ul>
-                          {service.features.map((feature) => (
-                            <li key={feature}>
-                              <CheckCircle2 size={16} />
-                              <span>{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div className="service-detail-applications">
-                      <span>APPLICATION AREAS</span>
-                      <div>
-                        {service.applications.map((application) => (
-                          <span key={application}>{application}</span>
-                        ))}
-                      </div>
-                    </div>
-                  </article>
-                );
-              })}
+              <a href="/services/materials" className="service-shortcut-card">
+                <span className="shortcut-number">04</span>
+                <span className="shortcut-icon"><Layers3 size={27} /></span>
+                <h3>3D Filament & Materials</h3>
+                <p>Discover PLA, PETG and TPU for different applications.</p>
+                <span className="shortcut-action">EXPLORE MATERIALS <ArrowUpRight size={17} /></span>
+              </a>
             </div>
           </div>
         </section>
 
-        {/* MATERIALS */}
-        <section className="materials-section" id="materials">
-          <div className="services-container">
-            <div className="services-section-heading">
-              <span className="services-eyebrow">MATERIAL KNOWLEDGE / 04</span>
-              <h2>
-                Explore Our <span>Materials.</span>
-              </h2>
-              <p>
-                Material selection plays an important role in 3D printing.
-                We explore commonly used materials based on design
-                requirements, functional expectations, and intended
-                applications.
-              </p>
-            </div>
-
-            <div className="materials-grid">
-              {materials.map((material, index) => (
-                <article className="material-card" key={material.code}>
-                  <div className="material-card-top">
-                    <span className="material-index">
-                      MATERIAL / 0{index + 1}
-                    </span>
-                    <div className="material-code">{material.code}</div>
-                  </div>
-
-                  <h3>{material.name}</h3>
-                  <p className="material-character">{material.character}</p>
-                  <p className="material-description">
-                    {material.description}
-                  </p>
-
-                  <div className="material-uses">
-                    <span>COMMON APPLICATIONS</span>
-                    {material.uses.map((use) => (
-                      <div key={use}>
-                        <CheckCircle2 size={15} />
-                        {use}
-                      </div>
-                    ))}
-                  </div>
-                </article>
-              ))}
-            </div>
-
-            <div className="materials-disclaimer">
-              <Lightbulb size={21} />
-              <p>
-                Material recommendations are based on the intended
-                application, design specifications, and individual material
-                properties. Final selection depends on the requirements of
-                each project.
-              </p>
-            </div>
-          </div>
-        </section>
 
         {/* PROJECT PROCESS */}
         <section className="project-process-section" id="project-process">
@@ -402,3 +318,8 @@ function ServicesPage() {
 }
 
 export default ServicesPage;
+
+
+
+
+

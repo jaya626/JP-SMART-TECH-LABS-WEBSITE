@@ -1372,3 +1372,203 @@
   }
 }
 
+
+/* =========================================
+   FOUR SERVICE NAVIGATION CARDS
+========================================= */
+
+.service-shortcuts {
+  padding: 85px 0;
+  background: #ffffff;
+}
+
+.shortcuts-heading {
+  max-width: 720px;
+  margin-bottom: 38px;
+}
+
+.shortcuts-heading h2 {
+  margin: 15px 0;
+  color: var(--jp-purple);
+  font-size: clamp(30px, 4vw, 43px);
+  letter-spacing: -1.5px;
+}
+
+.shortcuts-heading h2 span {
+  color: var(--jp-orange);
+}
+
+.shortcuts-heading p {
+  max-width: 600px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.service-shortcuts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 19px;
+}
+
+.service-shortcut-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 285px;
+  padding: 25px 21px;
+  overflow: hidden;
+  border: 1px solid var(--jp-border);
+  border-radius: 19px;
+  background: var(--jp-surface-soft);
+  box-shadow: var(--jp-shadow-sm);
+  transition: var(--jp-transition);
+  scroll-margin-top: 110px;
+}
+
+.service-shortcut-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--jp-purple),
+    var(--jp-orange)
+  );
+  transition: width .35s ease;
+}
+
+.service-shortcut-card:hover {
+  transform: translateY(-7px);
+  background: #ffffff;
+  border-color: var(--jp-border-strong);
+  box-shadow: var(--jp-shadow-md);
+}
+
+.service-shortcut-card:hover::after {
+  width: 100%;
+}
+
+.shortcut-number {
+  position: absolute;
+  top: 21px;
+  right: 21px;
+  color: rgba(84, 33, 119, .22);
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.shortcut-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 25px;
+  border-radius: 17px;
+  color: var(--jp-purple);
+  background: var(--jp-surface-purple);
+  transition: var(--jp-transition);
+}
+
+.service-shortcut-card:hover .shortcut-icon {
+  color: #ffffff;
+  background: var(--jp-purple);
+  transform: rotate(-5deg);
+}
+
+.service-shortcut-card h3 {
+  margin-bottom: 11px;
+  color: var(--jp-purple);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.service-shortcut-card p {
+  margin-bottom: 22px;
+  color: var(--jp-muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.shortcut-action {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto;
+  color: var(--jp-purple);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .8px;
+}
+
+.shortcut-action svg {
+  color: var(--jp-orange);
+  transition: transform .25s ease;
+}
+
+.service-shortcut-card:hover .shortcut-action svg {
+  transform: translate(4px, -3px);
+}
+
+/* Anchor navigation spacing */
+
+#service-list,
+#service-01,
+#service-02,
+#service-03,
+#materials,
+#project-process {
+  scroll-margin-top: 105px;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+  .service-shortcuts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 550px) {
+  .service-shortcuts {
+    padding: 60px 0;
+  }
+
+  .service-shortcuts-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .service-shortcut-card {
+    min-height: 235px;
+  }
+
+  .shortcuts-heading h2 {
+    font-size: 31px;
+  }
+}
+
+
+/* Reduce space below navbar in Project Process section */
+.project-process-section {
+  padding-top: 35px !important;
+  padding-bottom: 75px;
+}
+
+
+/* Reduce top spacing before the four service cards */
+.service-shortcuts {
+  padding-top: 25px !important;
+  padding-bottom: 65px;
+}
+
+/* Keep the heading and cards compact */
+.shortcuts-heading {
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
