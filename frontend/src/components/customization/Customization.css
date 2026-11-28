@@ -1,0 +1,1091 @@
+
+/* =====================================================
+   JP SMART TECH LABS
+   CUSTOMIZATION STUDIO
+   Main layout and component styling
+===================================================== */
+
+/* =====================================================
+   01. ROOT SECTION
+===================================================== */
+
+.customization-section {
+  --custom-primary: #542177;
+  --custom-accent: #FFA239;
+  --custom-background: #FFE6E6;
+  --custom-white: #FFFFFF;
+  --custom-text: #30283A;
+  --custom-muted: #706779;
+  --custom-border: #E8DCEB;
+
+  width: 100%;
+  height: calc(100svh - 100px);
+  min-height: 560px;
+
+  padding: 10px 20px;
+
+  background: var(--custom-background);
+
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.customization-section *,
+.customization-section *::before,
+.customization-section *::after {
+  box-sizing: border-box;
+}
+
+.customization-container {
+  width: min(1500px, 100%);
+  height: 100%;
+
+  margin: 0 auto;
+}
+
+/* =====================================================
+   02. MAIN THREE-COLUMN LAYOUT
+===================================================== */
+
+.customization-workspace {
+  display: grid;
+
+  grid-template-columns:
+    minmax(190px, 0.8fr)
+    minmax(380px, 1.55fr)
+    minmax(280px, 1fr);
+
+  gap: 12px;
+
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  align-items: stretch;
+}
+
+/* =====================================================
+   03. LEFT COLUMN
+   Upload 30% / Price Summary 70%
+===================================================== */
+
+.customization-left-column {
+  display: grid;
+
+  grid-template-rows:
+    minmax(0, 30fr)
+    minmax(0, 70fr);
+
+  gap: 12px;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* =====================================================
+   04. COMMON PANEL HEADINGS
+===================================================== */
+
+.customization-panel-heading,
+.customization-simulation-heading,
+.print-panel-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  min-width: 0;
+}
+
+.customization-step {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--custom-white);
+  background: var(--custom-primary);
+
+  border-radius: 9px;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.customization-panel-heading h3,
+.customization-simulation-heading h3,
+.print-panel-heading h3 {
+  margin: 0;
+
+  color: var(--custom-primary);
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.customization-panel-heading p,
+.customization-simulation-heading p,
+.print-panel-heading p {
+  margin: 3px 0 0;
+
+  color: var(--custom-muted);
+
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+/* =====================================================
+   05. 01 - UPLOAD PANEL
+===================================================== */
+
+.customization-upload-panel {
+  grid-row: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+
+  padding: 15px;
+
+  background: var(--custom-white);
+
+  border: 1px solid var(--custom-border);
+  border-radius: 16px;
+
+  overflow: hidden;
+}
+
+.customization-upload-panel .customization-panel-heading {
+  flex-shrink: 0;
+
+  margin-bottom: 12px;
+}
+
+/* Uploader wrapper */
+
+.customization-upload-panel .stl-uploader {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* Drop zone */
+
+.customization-upload-panel .stl-upload-area {
+  flex: 1;
+
+  width: 100%;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px;
+
+  background: #FFFAFF;
+
+  border: 1.5px dashed #CDA9E2;
+  border-radius: 12px;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.customization-upload-panel .stl-upload-area:hover {
+  background: #F7EDFC;
+  border-color: var(--custom-primary);
+}
+
+.customization-upload-panel .stl-upload-area.dragging {
+  background: #F3E5FC;
+  border-color: var(--custom-primary);
+  border-style: solid;
+}
+
+.customization-upload-panel .stl-upload-icon {
+  margin-bottom: 8px;
+}
+
+.customization-upload-panel .stl-upload-button {
+  margin-top: 5px;
+}
+
+/* Uploaded file */
+
+.customization-upload-panel .stl-file-success {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Upload errors */
+
+.customization-upload-panel .stl-upload-error {
+  margin-top: 7px;
+  color: #DC2626;
+  font-size: 10px;
+}
+
+/* =====================================================
+   06. 03 - PRICE SUMMARY
+===================================================== */
+
+.customization-left-column > .print-price-panel {
+  grid-row: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+
+  padding: 14px;
+
+  color: var(--custom-white);
+  background: var(--custom-primary);
+
+  border: 1px solid var(--custom-primary);
+  border-radius: 16px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.print-price-eyebrow {
+  display: block;
+
+  color: #FFC477;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.print-price-panel h3 {
+  margin: 5px 0 10px;
+
+  color: var(--custom-white);
+
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.price-summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 8px;
+
+  padding: 9px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.17);
+
+  font-size: 11px;
+}
+
+.price-summary-row span {
+  color: #E7D9F0;
+}
+
+.price-summary-row strong {
+  color: var(--custom-white);
+
+  font-size: 11px;
+  text-align: right;
+}
+
+.price-summary-row .price-highlight {
+  color: var(--custom-accent);
+
+  font-size: 16px;
+  font-weight: 850;
+}
+
+.price-summary-note {
+  margin: 9px 0;
+
+  color: #E7D9F0;
+
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.print-action-buttons {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  margin-top: 10px;
+}
+
+.print-add-cart {
+  width: 100%;
+  min-height: 36px;
+
+  padding: 9px 12px;
+
+  color: var(--custom-primary);
+  background: var(--custom-white);
+
+  border: none;
+  border-radius: 25px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.print-add-cart:hover:not(:disabled) {
+  background: #FFF0D9;
+  transform: translateY(-1px);
+}
+
+.print-add-cart:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* =====================================================
+   07. CENTRE COLUMN
+   Title 20% / Simulation 80%
+===================================================== */
+
+.customization-center-column {
+  display: grid;
+
+  grid-template-rows:
+    minmax(0, 20fr)
+    minmax(0, 80fr);
+
+  gap: 12px;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* =====================================================
+   08. TITLE
+   Transparent - no card
+===================================================== */
+
+.customization-title-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+
+  padding: 5px 10px;
+
+  background: transparent !important;
+
+  border: none !important;
+  border-radius: 0 !important;
+
+  box-shadow: none !important;
+
+  text-align: center;
+}
+
+.customization-eyebrow {
+  color: var(--custom-accent);
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+}
+
+.customization-title-panel h2 {
+  margin: 4px 0;
+
+  color: var(--custom-primary);
+
+  font-size: clamp(21px, 2.2vw, 30px);
+  font-weight: 850;
+
+  line-height: 1.15;
+}
+
+.customization-title-panel h2 span {
+  color: var(--custom-accent);
+}
+
+.customization-title-panel p {
+  margin: 3px 0 0;
+
+  color: var(--custom-muted);
+
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* =====================================================
+   09. 02 - SIMULATION PANEL
+===================================================== */
+
+.customization-viewer-panel {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+
+  min-width: 0;
+  min-height: 0;
+
+  padding: 13px;
+
+  background: var(--custom-white);
+
+  border: 1px solid var(--custom-border);
+  border-radius: 16px;
+
+  overflow: hidden;
+}
+
+.customization-simulation-heading {
+  flex-shrink: 0;
+
+  margin-bottom: 10px;
+}
+
+/* Model viewer containers */
+
+.model-viewer-container,
+.model-viewer-layout {
+  flex: 1;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+
+.model-viewer-layout {
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+/* =====================================================
+   10. 3D VIEWPORT
+===================================================== */
+
+.model-viewer-viewport {
+  position: relative;
+
+  flex: 1 1 auto;
+
+  width: 100%;
+  min-height: 150px;
+
+  overflow: hidden;
+
+  background: #111827;
+
+  border-radius: 13px;
+}
+
+.model-viewer-canvas {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+.model-viewer-canvas canvas {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+/* =====================================================
+   11. VIEWER TOOLBAR
+===================================================== */
+
+.model-viewer-toolbar {
+  position: absolute;
+  z-index: 5;
+
+  top: 10px;
+  left: 10px;
+  right: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  pointer-events: none;
+}
+
+.model-viewer-status {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 7px 10px;
+
+  color: var(--custom-white);
+  background: rgba(17, 24, 39, 0.85);
+
+  border-radius: 20px;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.model-viewer-status-dot {
+  width: 7px;
+  height: 7px;
+
+  background: #22C55E;
+
+  border-radius: 50%;
+}
+
+.model-viewer-controls {
+  display: flex;
+  gap: 5px;
+
+  pointer-events: auto;
+}
+
+.model-viewer-controls button {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--custom-white);
+  background: rgba(17, 24, 39, 0.85);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.model-viewer-controls button:hover {
+  background: var(--custom-primary);
+}
+
+/* =====================================================
+   12. VIEWER EMPTY STATE
+===================================================== */
+
+.model-viewer-empty {
+  position: absolute;
+  z-index: 2;
+
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px;
+
+  text-align: center;
+
+  pointer-events: none;
+}
+
+.model-viewer-empty-icon {
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 9px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--custom-white);
+  background: rgba(255, 255, 255, 0.1);
+
+  border-radius: 13px;
+
+  font-size: 27px;
+}
+
+.model-viewer-empty h3 {
+  color: var(--custom-white);
+  font-size: 13px;
+}
+
+.model-viewer-empty p {
+  max-width: 250px;
+
+  margin-top: 5px;
+
+  color: #CBD5E1;
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* =====================================================
+   13. VIEWER LOADING AND ERROR
+===================================================== */
+
+.model-viewer-overlay {
+  position: absolute;
+  z-index: 6;
+
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px;
+
+  color: var(--custom-white);
+  background: rgba(17, 24, 39, 0.93);
+
+  text-align: center;
+}
+
+.model-viewer-overlay h3 {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.model-viewer-overlay p {
+  margin-top: 5px;
+
+  color: #CBD5E1;
+
+  font-size: 10px;
+}
+
+.model-viewer-loader {
+  width: 30px;
+  height: 30px;
+
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-top-color: var(--custom-accent);
+
+  border-radius: 50%;
+
+  animation: viewer-spin 0.8s linear infinite;
+}
+
+@keyframes viewer-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.model-viewer-error-icon {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--custom-white);
+  background: #DC2626;
+
+  border-radius: 50%;
+}
+
+/* =====================================================
+   14. VIEWER HINT
+===================================================== */
+
+.model-viewer-hint {
+  position: absolute;
+  z-index: 4;
+
+  bottom: 8px;
+  left: 50%;
+
+  width: max-content;
+  max-width: calc(100% - 16px);
+
+  padding: 5px 9px;
+
+  color: #CBD5E1;
+  background: rgba(17, 24, 39, 0.75);
+
+  border-radius: 20px;
+
+  font-size: 8px;
+  text-align: center;
+  white-space: nowrap;
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
+}
+
+/* =====================================================
+   15. GEOMETRY DETAILS
+===================================================== */
+
+.model-viewer-info {
+  flex: 0 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 10px;
+
+  background: #F8F3FA;
+
+  border: 1px solid var(--custom-border);
+  border-radius: 10px;
+}
+
+.model-viewer-info-heading {
+  display: none;
+}
+
+.model-viewer-dimensions {
+  display: contents;
+}
+
+.model-viewer-dimension,
+.model-viewer-volume,
+.model-viewer-triangles {
+  min-width: 0;
+  padding: 3px;
+}
+
+.model-viewer-dimension span,
+.model-viewer-volume span,
+.model-viewer-triangles span {
+  display: block;
+
+  color: var(--custom-muted);
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.model-viewer-dimension strong,
+.model-viewer-volume strong,
+.model-viewer-triangles strong {
+  display: block;
+
+  margin-top: 4px;
+
+  color: var(--custom-primary);
+
+  font-size: 10px;
+
+  overflow-wrap: anywhere;
+}
+
+.model-viewer-volume small {
+  font-size: 8px;
+}
+
+.model-viewer-info-empty {
+  grid-column: 1 / -1;
+
+  padding: 7px;
+
+  color: var(--custom-muted);
+
+  font-size: 10px;
+  text-align: center;
+}
+
+/* =====================================================
+   16. RIGHT COLUMN
+   CHOOSE PRINT OPTIONS 100%
+===================================================== */
+
+.customization-right-column {
+  width: 100%;
+  height: 100%;
+
+  min-width: 0;
+  min-height: 0;
+}
+
+.customization-right-column > .print-options-panel {
+  width: 100%;
+  height: 100%;
+
+  min-width: 0;
+  min-height: 0;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: thin;
+  scrollbar-color: #CBB4D9 transparent;
+}
+
+/* =====================================================
+   17. TABLET RESPONSIVENESS
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .customization-section {
+    height: auto;
+    min-height: 0;
+
+    padding: 18px 14px;
+
+    overflow: visible;
+  }
+
+  .customization-container {
+    height: auto;
+  }
+
+  .customization-workspace {
+    height: auto;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    align-items: stretch;
+  }
+
+  .customization-left-column {
+    min-height: 560px;
+  }
+
+  .customization-center-column {
+    min-height: 650px;
+  }
+
+  .customization-right-column {
+    grid-column: 1 / -1;
+
+    height: auto;
+  }
+
+  .customization-right-column > .print-options-panel {
+    height: auto;
+
+    overflow: visible;
+  }
+
+  .customization-left-column > .print-price-panel {
+    height: 100%;
+  }
+
+  .model-viewer-viewport {
+    min-height: 250px;
+  }
+}
+
+/* =====================================================
+   18. MOBILE RESPONSIVENESS
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .customization-section {
+    height: auto;
+    min-height: 0;
+
+    padding: 14px 10px;
+
+    overflow: visible;
+  }
+
+  .customization-container {
+    height: auto;
+  }
+
+  .customization-workspace {
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    height: auto;
+
+    gap: 10px;
+  }
+
+  /* LEFT COLUMN */
+
+  .customization-left-column {
+    grid-template-rows: auto auto;
+
+    min-height: 0;
+  }
+
+  .customization-upload-panel {
+    min-height: 190px;
+  }
+
+  .customization-left-column > .print-price-panel {
+    height: auto;
+    min-height: 0;
+  }
+
+  /* CENTRE COLUMN */
+
+  .customization-center-column {
+    grid-template-rows: auto auto;
+
+    min-height: 0;
+  }
+
+  .customization-title-panel {
+    min-height: 90px;
+    padding: 8px 4px;
+  }
+
+  .customization-title-panel h2 {
+    font-size: 25px;
+  }
+
+  .customization-viewer-panel {
+    height: auto;
+    min-height: 480px;
+  }
+
+  .model-viewer-viewport {
+    min-height: 300px;
+  }
+
+  /* RIGHT COLUMN */
+
+  .customization-right-column {
+    grid-column: auto;
+
+    height: auto;
+  }
+
+  .customization-right-column > .print-options-panel {
+    height: auto;
+
+    overflow: visible;
+  }
+
+  /* GEOMETRY DETAILS */
+
+  .model-viewer-info {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .model-viewer-info-heading {
+    display: flex;
+
+    grid-column: 1 / -1;
+
+    color: var(--custom-primary);
+    font-size: 10px;
+  }
+
+  .model-viewer-dimensions {
+    display: grid;
+
+    grid-column: 1 / -1;
+
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .model-viewer-info-empty {
+    grid-column: 1 / -1;
+  }
+}
+
+/* =====================================================
+   19. SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .customization-title-panel h2 {
+    font-size: 22px;
+  }
+
+  .customization-viewer-panel {
+    min-height: 430px;
+  }
+
+  .model-viewer-viewport {
+    min-height: 260px;
+  }
+
+  .model-viewer-controls button {
+    width: 27px;
+    height: 27px;
+  }
+
+  .customization-upload-panel,
+  .customization-viewer-panel {
+    padding: 11px;
+  }
+}
+
+/* =====================================================
+   20. ACCESSIBILITY
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .model-viewer-loader {
+    animation-duration: 2s;
+  }
+
+  .customization-section *,
+  .customization-section *::before,
+  .customization-section *::after {
+    scroll-behavior: auto;
+    transition-duration: 0.01ms !important;
+  }
+}
