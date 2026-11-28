@@ -3,12 +3,14 @@
 import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
 import ServiceDetailPage from "./pages/ServiceDetailPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/services" element={<ServicesPage />} />
+      <Route path="/contact" element={<ContactPage />} />
       <Route
         path="/services/:serviceSlug"
         element={<ServiceDetailPage />}
@@ -18,3 +20,4 @@ function App() {
 }
 
 export default App;
+
